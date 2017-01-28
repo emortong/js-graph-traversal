@@ -5,14 +5,22 @@ const Node = require('../graphGenerator');
 const BFS = require('../breadthFirstSearch');
 const DFS = require('../depthFirstSearch');
 
+
 describe('Graph Generator', () => {
+  let A;
+  let B;
+  let C;
+  let D;
+  let E;
+  let F;
+
   beforeEach(() => {
-    let A = new Node("A", "Joe");
-    let B = new Node("B", "Jon");
-    let C = new Node("C", "Ray");
-    let D = new Node("D", "JSON");
-    let E = new Node("E", "Marifel");
-    let F = new Node("F", "Nigel");
+    A = new Node("A", "Joe");
+    B = new Node("B", "Jon");
+    C = new Node("C", "Ray");
+    D = new Node("D", "JSON");
+    E = new Node("E", "Marifel");
+    F = new Node("F", "Nigel");
   });
 
   it('should be a function that exists', () => {
@@ -72,13 +80,19 @@ describe('Graph Generator', () => {
 });
 
 describe('Depth First Search', () => {
+  let A;
+  let B;
+  let C;
+  let D;
+  let E;
+  let F;
   beforeEach(() => {
-    let A = new Node("A", "Joe");
-    let B = new Node("B", "Jon");
-    let C = new Node("C", "Ray");
-    let D = new Node("D", "JSON");
-    let E = new Node("E", "Marifel");
-    let F = new Node("F", "Nigel");
+    A = new Node("A", "Joe");
+    B = new Node("B", "Jon");
+    C = new Node("C", "Ray");
+    D = new Node("D", "JSON");
+    E = new Node("E", "Marifel");
+    F = new Node("F", "Nigel");
     A.addNeighbors([B, C]);
     B.addNeighbors([D, E]);
     C.addNeighbors([F]);

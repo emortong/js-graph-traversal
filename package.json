@@ -15,7 +15,13 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/devleague/js-graph-traversal/issues"
-  },
+  },"xo": {
+      "esnext": true,
+      "space": true,
+      "globals": [
+        "window"
+      ]
+    }
   "homepage": "https://github.com/devleague/js-graph-traversal#readme",
   "devDependencies": {
     "chai": "^3.5.0",
