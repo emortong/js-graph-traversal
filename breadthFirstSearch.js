@@ -20,7 +20,6 @@ const BFS = (start) => {
    }
 
    if(queue.length === 0) {
-    console.log(path);
     return path;
    }
 

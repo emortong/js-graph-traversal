@@ -159,7 +159,6 @@ describe('Depth First Search', () => {
   });
 
   it('should return the name of the node with the value stored in it', () => {
-    console.log(DFS(A, "JSON").name);
     expect(DFS(A, "JSON").name).to.equal("D");
     expect(DFS(A, "Nigel").name).to.equal("F");
     expect(DFS(B, "Marifel").name).to.equal("E");
@@ -197,17 +196,11 @@ describe('Breadth First Search', () => {
   });
 
   it('should return the traversal path from the starting point all the way to the end', () => {
-    // expect(BFS(A)).to.equal("[A,B,C,D,E,F]");
     expect(BFS(A)).to.deep.equal(['A','B','C','D','E','F']);
-    // expect(BFS(B)).to.equal("[B,D,E]");
     expect(BFS(B)).to.deep.equal(['B','D','E']);
-    // expect(BFS(C)).to.equal("[C,F]");
     expect(BFS(C)).to.deep.equal(['C','F']);
-    // expect(BFS(D)).to.equal("[D]");
     expect(BFS(D)).to.deep.equal(['D']);
-    // expect(BFS(F)).to.equal("[E]");
     expect(BFS(E)).to.deep.equal(['E']);
-    // expect(BFS(F)).to.equal("[F]");
     expect(BFS(F)).to.deep.equal(['F']);
   });
 });
