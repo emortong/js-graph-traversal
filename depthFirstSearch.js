@@ -23,10 +23,6 @@ const DFS = (start, searchFor) => {
   if(stack.length === 0) {
     return false;
   }
-
-
 }
 
 module.exports = DFS;
-
-//for all neighbors from currentNode to w in
