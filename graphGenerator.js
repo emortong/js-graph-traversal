@@ -1,4 +1,4 @@
-const Node = class Node {
+module.exports = class Node {
   constructor(name, value) {
     this.name = name;
     this.value = value;
@@ -7,9 +7,9 @@ const Node = class Node {
 
   addNeighbors(arr) {
     if(this.neighbors.length !== 0 && arr !== undefined) {
-      this.neighbors.concat(arr);
+      this.neighbors = this.neighbors.concat(arr);
     } else if(this.neighbors.length === 0 && arr !== undefined) {
-      this.neighbors = arr;
+      return this.neighbors = arr;
     }
     return this.neighbors;
   }
@@ -19,4 +19,3 @@ const Node = class Node {
   }
 }
 
-module.exports = Node;

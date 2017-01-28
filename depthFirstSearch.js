@@ -3,10 +3,30 @@
 const Node = require('./graphGenerator');
 
 const DFS = (start, searchFor) => {
-  console.log(start.neighbors[0].neighbors);
-    for(let i = 0; i < start.neighbors; i++) {
-      console.log(i, start.neighbors[i])
+  let stack = [start];
+  let visited = [];
+  let currNode = start;
+
+  while(stack.length !== 0) {
+    currNode = stack.pop();
+    if(currNode.value === searchFor) {
+      return currNode;
     }
+    if(visited.indexOf(currNode) === -1) {
+      visited.push(currNode);
+      currNode.neighbors.forEach( w => {
+        stack.push(w);
+      })
+    }
+  }
+
+  if(stack.length === 0) {
+    return false;
+  }
+
+
 }
 
 module.exports = DFS;
+
+//for all neighbors from currentNode to w in

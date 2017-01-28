@@ -50,7 +50,7 @@ The basic operations provided by a graph data structure include:
 
 1. Define a `Node` class that has a `name {{string}}`, `value{{*}}`, and `neighbors{{array}}`
 1. `Node.addNeighbors([x {{node}}, y {{node}}, z {{node}} ...])`: adds an array of nodes x, y, z to `node`. Return an array with all of the nodes neighbors.
-1. `Node.getNeighbors(x {{node}})`: lists all vertices such that there is an edge from the vertices x to y.
+1. `Node.getNeighbors()`: lists all vertices such that there is an edge from the vertices x to y.
 1. [Optional] `Node.removeNode(x {{node}})`: removes the vertex x, if it is there.
 
 Using these example methods, you should be able to make the graph above like the following:
@@ -90,7 +90,7 @@ The basic operations provided by a Depth-first Search usually include:
 ### Stretch Goals
 1. Write a blog post ELI5 the differences between depth and breadth-first Search.
   1. Write Pseudocode for each implementation
-  1. Explain the Big O notation for each method
+  1. Explain the Big O time and space complexities for each graph traversing method
   1. Provide examples of when you would favor one graph traversal algorithm over the other.
 1. Implement a **Queue Module** for **Breadth-first search.**
 1. Implement a **Stack Module** for **Depth-first search.**
